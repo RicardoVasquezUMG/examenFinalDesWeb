@@ -1,0 +1,71 @@
+{% extends 'base.html' %}
+
+{% block contenido %}
+    <!-- Hero Section -->
+    <section id="hero" class="hero section">
+      <div class="hero-container">
+        <div class="hero-content">
+          <div class="content-wrapper" data-aos="fade-up" data-aos-delay="100">
+            <h1 class="hero-title">Descubre las Facultades</h1>
+                <p>Ricardo Vasquez Orellana, 5990-22-12937</p>
+                <p>Esta es ejemplo para practicar HTML. Y esta es la pagina de inicio</p>
+                <p>Esta es una simulacion a la pagina de la universidad.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+            <div class="hero-actions" data-aos="fade-up" data-aos-delay="200">
+              <a href="#products" class="btn-primary">Inscrebete Aqui!</a>
+              <a href="#categories" class="btn-secondary">Nuestras sedes</a>
+            </div>
+            <div class="features-list" data-aos="fade-up" data-aos-delay="300">
+              <div class="feature-item">
+                <i class="bi bi-truck"></i>
+                <span>Free Shipping</span>
+              </div>
+              <div class="feature-item">
+                <i class="bi bi-award"></i>
+                <span>Quality Guarantee</span>
+              </div>
+              <div class="feature-item">
+                <i class="bi bi-headset"></i>
+                <span>24/7 Support</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visuals">
+          <div class="product-showcase" data-aos="fade-left" data-aos-delay="200">
+            <div class="product-card featured">
+              <img src="https://umg.edu.gt/img/admisiones/antigua.webp " alt="Featured Product" class="img-fluid">
+              <div class="product-info">
+                <h4>Nuestras instalaciones</h4>
+              </div>
+            </div>
+
+            <div class="product-grid">
+              <div class="product-mini" data-aos="zoom-in" data-aos-delay="400">
+                <img src="data:image/jpeg;base64,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" alt="Product" class="img-fluid">
+                <span class="mini-price">3</span>
+              </div>
+              <div class="product-mini" data-aos="zoom-in" data-aos-delay="500">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAbFBMVEX///8AAADf39/Pz88wMDCBgYGUlJQODg6FhYXo6OhWVlbl5eWNjY3Z2dmysrIbGxtdXV35+fmpqaloaGjw8PBRUVHBwcEUFBSdnZ10dHQiIiK4uLhLS0tra2sLCws4ODhBQUHJyckpKSk7OzsO5NV3AAADSElEQVR4nO3d63KiMBiAYeMJPFW0aKuttYf7v8fuzkqTXRdJPiEHfZ+fKULeaWegUbDXAwAAAAAAAABArJy/D129j8vQ07b3oWQGoSduqxQGqmUqv8VnaaFah566pUJcOAo9dUtTCimM3h0VHvORjXyYbOHB8gVFsoWPli+gMDoUnkmusLi9wu1uaiiW1YT3xdTKvnrB5z8/2G1Dp/3x2HwqF7P9M+jUvMNApeah837pNFCp0Hm93qLjwkXowN6g48LwizcUUphS4S5vzy7KwlmLe51FWdhvca99Cj2iUIZCnyiUodAnCmUo9IlCGQp9Oi+czDTz8yOlxfjkNBZ34UZpD8aWuTGeG+MPxvjmNBZ3oflpE7PQXDo2F3rNwuI0RqFPFGoUUhjKPRaa50Pz85R158O1MZ7G+XC20Mxrl4kxPjHGS2O8WlWOu7ANFPpEoQyFPlEoQ6FPFMpQ6BOFMhT6RKEMhT6dFz5my4p6MbYcKz0+NsZf9HhW3UgUd+Htr0RRSOFvFPpEoZZqob6jpCo073R2fZd7ehrThT7uKCm34wv0Z86rwvX8R27Ob6vH5+ZNaYtcj1fvc+jC3aWDb1t5ksY2U3a6uWq77Onj+mPZ39cUorCNv+LXyAtfrz3UyvpQgQrV6spDTaIvnDTv7SIKKRQKUpg9/Zc+W3ZT2HjY9gprTjznV21taLxqW3RQWHMJHGglakChNQopFKKQQgeCwnb/x4+xsN11mhgLvay1UWiPQgqNLSmksOawAQq9vI/PVZs9CikUopBCBxRSKEQhhQ4opFCIQgodUBjqfvyghV6eqcBKlD0KKTS2pJDCmsNS2OTK82Fnz9wLWujluYlcl9qjkEIhCil0QCGFQhRS6IBCCoUopNABhekXlj97arwRsJvvzms8rPyxCoPD/i3L9L2aWY3GDUScDvu2PwgeEPKs0vLsGvgResbOXH+LXX4VdTccv+B6dQw9YWdHt8dHrD5DT9jZ0LFwGHrCzii848Li0nOaIlBcXbhu3jioNYU1dOEmH8Us31xdmAwK76/w9q/a0rvy/nJ8cNsh9ISdHZqj/jJo3mVknNcx1s37jIrgyqQ/+hqm4mvU5lImAAAAAAAAACBN32Ysbx9kcht2AAAAAElFTkSuQmCC" alt="Product" class="img-fluid">
+                <span class="mini-price">24</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="floating-elements">
+            <div class="floating-icon cart" data-aos="fade-up" data-aos-delay="600">
+              <i class="bi bi-cart3"></i>
+              <span class="notification-dot">3</span>
+            </div>
+            <div class="floating-icon wishlist" data-aos="fade-up" data-aos-delay="700">
+              <i class="bi bi-heart"></i>
+            </div>
+            <div class="floating-icon search" data-aos="fade-up" data-aos-delay="800">
+              <i class="bi bi-search"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section><!-- /Hero Section -->
+{% endblock %}

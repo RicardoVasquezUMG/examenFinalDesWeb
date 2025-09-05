@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block contenido %}
+<h2> Crear Publicación </h2>
+<a href="{% url 'publicaciones:crear' %}" class="btn btn-primary mb-3">Agregar Publicación</a>
+<br><br>
+<h1>Lista de Publicaciones</h1>
+<table class="table table-bordered table-striped">
+	<thead>
+		<tr>
+			<th>#</th>
+			<th>Título</th>
+			<th>Autor</th>
+			<th>Fecha</th>
+			<th>Administrador</th>
+			<th>Estado</th>
+			<th>Acciones</th>
+		</tr>
+	</thead>
+	<tbody>
+		{% for publicacion in publicaciones %}
+		<tr>
+			<td>{{ forloop.counter }}</td>
+			<td>{{ publicacion.titulo }}</td>
+			<td>{{ publicacion.autor }}</td>
+			<td>{{ publicacion.fecha }}</td>
+			<td>{{ publicacion.administrador }}</td>
+			<td>{{ publicacion.estado }}</td>
+			<td>
+				<a href="{% url 'publicaciones:editar' publicacion.id %}" class="btn btn-sm btn-warning">Editar</a>
+				<a href="{% url 'publicaciones:detalle' publicacion.id %}" class="btn btn-sm btn-info">Ver</a>
+			</td>
+		</tr>
+		{% empty %}
+		<tr><td colspan="6">No hay publicaciones registradas.</td></tr>
+		{% endfor %}
+	</tbody>
+</table>
+{% endblock %}

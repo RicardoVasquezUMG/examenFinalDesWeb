@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block contenido %}
+    <h2> Inscribir Administrador </h2>
+    <form method="post">
+        {% csrf_token %}
+        <div class="mb-2">nombre = {{ form.nombre }}</div>
+        <div class="mb-2">apellido = {{ form.apellido }}</div>
+        <div class="mb-2">edad = {{ form.edad }}</div>
+        <div class="mb-2">cargo = {{ form.cargo }}</div>
+        <div class="mb-2">departamento = {{ form.departamento }}</div>
+        <div class="mb-2">correo = {{ form.correo }}</div>
+        <div class="mb-2">telefono = {{ form.telefono }}</div>
+        <div class="mb-2">ciudad = {{ form.ciudad }}</div>
+        <button type="submit" class="btn btn-primary mb-3">Guardar</button>
+    </form>
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block contenido %}
+<h1>Detalle de Estudiante</h1>
+<ul class="list-group">
+    <li class="list-group-item"><strong>Nombre:</strong> {{ estudiante.nombre }}</li>
+    <li class="list-group-item"><strong>Apellido:</strong> {{ estudiante.apellido }}</li>
+    <li class="list-group-item"><strong>Edad:</strong> {{ estudiante.edad }}</li>
+    <li class="list-group-item"><strong>Grado:</strong> {{ estudiante.grado }}</li>
+    <li class="list-group-item"><strong>Correo:</strong> {{ estudiante.email }}</li>
+    <li class="list-group-item"><strong>Teléfono:</strong> {{ estudiante.telefono }}</li>
+    <li class="list-group-item"><strong>Ciudad:</strong> {{ estudiante.ciudad }}</li>
+</ul>
+<a href="{% url 'student:Estudiantesapp' %}" class="btn btn-secondary mt-3">Volver</a>
+{% endblock %}
+
+

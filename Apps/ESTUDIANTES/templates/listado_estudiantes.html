@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+
+{% block contenido %}
+    <br>
+    <div style="width: 35%;" >
+        <form action="" method="get" class="d-flex">
+            <div class="input-group">
+                <input type="text" class="form-control"  placeholder="Buscar Estudiantes" name="nombre" value="{{request.GET.nombre}}">
+                <button class="btn" type="submit">
+                <i class="bi bi-search"></i>
+                </button>
+            </div>
+        </form>
+    </div>
+
+    <br>
+    <h1>Lista de Estudiantes</h1>
+     <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Edad</th>
+                <th>Grado</th>
+                <th>Correo</th>
+                <th>Teléfono</th>
+                <th>Ciudad</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            {% for estudiante in estudiantes %}
+            <tr>
+                <td>{{ forloop.counter }}</td>
+                <td>{{ estudiante.nombre }}</td>
+                <td>{{ estudiante.apellido }}</td>
+                <td>{{ estudiante.edad|default:"-" }}</td>
+                <td>{{ estudiante.grado|default:"-" }}</td>
+                <td>{{ estudiante.email }}</td>
+                <td>{{ estudiante.telefono|default:"-" }}</td>
+                <td>{{ estudiante.ciudad|default:"-" }}</td>
+            </tr>
+            {% empty %}
+            <tr><td colspan="8">No hay estudiantes registrados.</td></tr>
+            {% endfor %}
+        </tbody>
+    </table> 
+{% endblock %}
+
+

@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block contenido %}
+<h1>Detalle de Administrador</h1>
+<ul class="list-group">
+    <li class="list-group-item"><strong>Nombre:</strong> {{ administrador.nombre }}</li>
+    <li class="list-group-item"><strong>Apellido:</strong> {{ administrador.apellido }}</li>
+    <li class="list-group-item"><strong>Edad:</strong> {{ administrador.edad }}</li>
+    <li class="list-group-item"><strong>Cargo:</strong> {{ administrador.cargo }}</li>
+    <li class="list-group-item"><strong>Departamento:</strong> {{ administrador.departamento }}</li>
+    <li class="list-group-item"><strong>Correo:</strong> {{ administrador.correo }}</li>
+    <li class="list-group-item"><strong>Teléfono:</strong> {{ administrador.telefono }}</li>
+    <li class="list-group-item"><strong>Ciudad:</strong> {{ administrador.ciudad }}</li>
+</ul>
+<a href="{% url 'adminis:adminapp' %}" class="btn btn-secondary mt-3">Volver</a>
+{% endblock %}

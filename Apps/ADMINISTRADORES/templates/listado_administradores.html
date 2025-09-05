@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+
+{% block contenido %}
+    <br>
+    <div style="width: 35%;" >
+        <form action="" method="get" class="d-flex">
+            <div class="input-group">
+                <input type="text" class="form-control"  placeholder="Buscar Administrador" name="nombre" value="{{request.GET.nombre}}">
+                <button class="btn" type="submit">
+                <i class="bi bi-search"></i>
+                </button>
+            </div>
+        </form>
+    </div>
+
+    <br>
+    <h1>Lista de Administradores</h1>
+     <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th>#</th>
+               <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Edad</th>
+                <th>Cargo</th>
+                <th>Departamento</th>
+                <th>Correo</th>
+                <th>Teléfono</th>
+                <th>Ciudad</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for administrador in administradores %}
+            <tr>
+                <td>{{ forloop.counter }}</td>
+                <td>{{ administrador.nombre }}</td>
+                <td>{{ administrador.apellido }}</td>
+                <td>{{ administrador.edad }}</td>
+                <td>{{ administrador.cargo }}</td>
+                <td>{{ administrador.departamento }}</td>
+                <td>{{ administrador.correo }}</td>
+                <td>{{ administrador.telefono }}</td>
+                <td>{{ administrador.ciudad }}</td>
+            </tr>
+            {% empty %}
+            <tr><td colspan="8">No hay administradores registrados.</td></tr>
+            {% endfor %}
+        </tbody>
+    </table> 
+{% endblock %}
+
+

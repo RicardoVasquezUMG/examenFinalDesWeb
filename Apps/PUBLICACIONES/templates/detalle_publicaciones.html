@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block contenido %}
+<h2>Detalle de Publicación</h2>
+<p><strong>Título:</strong> {{ publicacion.titulo }}</p>
+<p><strong>Autor:</strong> {{ publicacion.autor }}</p>
+<p><strong>Fecha:</strong> {{ publicacion.fecha }}</p>
+<p><strong>Administrador:</strong> {{ publicacion.administrador }}</p>
+<p><strong>Estado:</strong> {{ publicacion.estado }}</p>
+<a href="{% url 'publicaciones:publiapp' %}" class="btn btn-secondary">Volver</a>
+{% endblock %}
