@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block contenido %}
+<h2>Editar Categoría</h2>
+<form method="post">
+    {% csrf_token %}
+    <div class="mb-2">Nombre: {{ form.nombre }}</div>
+    <div class="mb-2">Descripción: {{ form.descripcion }}</div>
+    <button type="submit" class="btn btn-primary mb-3">Guardar cambios</button>
+</form>
+{% endblock %}

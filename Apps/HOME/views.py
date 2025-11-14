@@ -20,3 +20,7 @@ class RegistroView(CreateView):
 class LoginView(LoginView):
     template_name = 'login.html'
     success_url = reverse_lazy('home:homeapp')
+
+
+class AboutView(TemplateView):
+    template_name = 'acercaDeMi.html'

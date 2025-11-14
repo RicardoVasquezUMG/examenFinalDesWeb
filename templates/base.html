@@ -50,7 +50,7 @@
           <!-- Logo -->
           <a href={% url 'home:homeapp' %} class="logo d-flex align-items-center">
             <!-- quitar comentario si deseas usar un logo de imagen -->
-            <h1 class="sitename">UMG Web</h1>
+            <h1 class="sitename">Tienda Web</h1>
           </a>
 
           <!-- Actions -->
@@ -101,15 +101,15 @@
         <nav id="navmenu" class="navmenu">
           <ul>
             <li><a href={% url 'home:homeapp' %}>Home</a></li>
-            {% if user.is_authenticated %}
-            <li><a href={% url 'student:Estudiantesapp' %}> CRUD Estudiantes</a></li>
-            <li><a href={% url 'adminis:adminapp' %}>CRUD Administradores</a></li>
-            <li><a href={% url 'publicaciones:publiapp' %}>CRUD Publicaciones</a></li>
-            {% endif %}
-            <li><a href={% url 'student:listado' %}>Estudiante</a></li>
-            <li><a href={% url 'adminis:listado' %}>Administrador</a></li>
-            <li><a href={% url 'publicaciones:listado' %}>Publicaciones</a></li>
-            <li><a href={% url 'about:aboutapp' %}>Acerca de</a></li>
+            
+            <li><a href={% url 'productos:productosapp' %}> CRUD productos</a></li>
+            <li><a href={% url 'categorias:categoriaapp' %}>CRUD categorias</a></li>
+            
+          
+            <li><a href={% url 'productos:listado' %}>Productos</a></li>
+            <li><a href={% url 'categorias:listado' %}>Categorías</a></li>
+            
+            <li><a href={% url 'home:about' %}>Acerca de</a></li>
           </ul>
         </nav>
       </div>

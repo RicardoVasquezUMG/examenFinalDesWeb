@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block contenido %}
+<h1>Detalle de Categoría</h1>
+<ul class="list-group">
+    <li class="list-group-item"><strong>Nombre:</strong> {{ categoria.nombre }}</li>
+    <li class="list-group-item"><strong>Descripción:</strong> {{ categoria.descripcion }}</li>
+</ul>
+<a href="{% url 'categorias:categoriaapp' %}" class="btn btn-secondary mt-3">Volver</a>
+{% endblock %}
