@@ -30,7 +30,7 @@
         <tr>
             <td>{{ forloop.counter }}</td>
             <td>{{ producto.nombre }}</td>
-            <td>{{ producto.descripcion }}</td>
+            <td>{{ producto.descripcion|slice:":100" }}{% if producto.descripcion|length > 100 %}...{% endif %}</td>
             <td>{{ producto.precio }}</td>
             <td>{{ producto.categoria.nombre }}</td>
             <td>{{ producto.stock }}</td>
